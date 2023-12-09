@@ -25,7 +25,7 @@
   expressionless : 346장  
   surprise : 344장  
   angry : 346장  
-  활용된 사진은 'dataset' 파일 안에 저장되어 있습니다.  
+  활용된 사진들은 양이 많아  깃허브에 올리지 못했지만, 주 사진인 250장을 따로따로 파일 안에 저장되어 있습니다.  
 
   
   그리고 이 데이터셋들을 학습시킬 때 Teachable Machine을 사용했습니다. Teachable Machine은 구글에서 만든 웹기반 노코드 인공지능 학습 툴입니다. 이는 대량의 학습 데이터를 MobileNet으로 사전 훈련 모델을 생성하고, 이 모델의 마지막 일부 레이어만 수정해 전이 학습을 진행하는 방식을 사용합니다. Teachable Machine에서 '모델 내보내기'로 준비된 model을 다운받아서 저의 필요에 따라 코드를 수정했습니다. 그리고 Teachable Machine에서 학습시킬 때 epoch, batch, learning rate를 여러 번 변경해서 학습시켰습니다. 그 이유는 이 세가지 요인에 따라 감정 맞추는 정답률을 조절할 수 있기 때문입니다. 결과적으로 epoch=2000, batch=16, learning rate=0.0005로 설정한 모델로 했습니다.
@@ -38,7 +38,7 @@
   'expressionless': 'https://youtu.be/YGX-Y4XngXc?si=VeNar3IpjWhtNB_I',  
   'angry': 'https://youtu.be/Tc0Z6A7xl7Y?si=O3GQAjW9F-lJGsHI',  
   'surprise': 'https://youtu.be/eaqVX9IMACQ?si=Z9i9C4mAsnw2_HMZ'    
-  활용된 사진은 '감정.png', 음악은 '감정.mp3'에 저장되어 있습니다.   
+  활용된 사진은 '감정.png', 음악은 '감정.mp3'에(음악이 양이 너무 커서 깃허브에 올리지 못했습니다) 저장되어 있습니다.   
 
    
   프로그램을 작성하면서, 테스트를 저의 얼굴로 했습니다. 하지만, 결과물을 만들 때 따로 테스트 데이트 만들어서 테스팅 했습니다. 테스틑 데이터를 만들기 위해서 class당 사진 1장씩 수집하고, 그 한 사진을 여러가지 필터 씌워서 10장 만들고, 0.8초 간격으로 이어 동영상을 만들었습니다.   
